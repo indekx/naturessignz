@@ -1,0 +1,14 @@
+{% extends "base_file.html" %}
+{% load static %}
+
+{% block product_details %}
+
+<section>
+    <div class="container">
+        <h4 style="text-transform: capitalize;">{{ product.title }}</h4>
+        <img src="{{ product.image.url }}">
+        <p style="color: #695B59 !important;">{{ product.detail }}</p>
+    </div>
+</section>
+      
+{% endblock %}

@@ -1,0 +1,29 @@
+{% extends "base_file.html" %}
+{% load static %}
+
+{% block store %}
+    <section class="store-items">
+        <div class="container">
+            <div class="row">
+                    {% if products %}
+                    {% for product in products %}
+                        {% if product.image %}
+                            <!-- A Product Start -->
+                            <div class="col-md-3 col-sm-3">
+                                <div class="card" style="width: 18rem;">
+                                    <a href="{% url 'product_detail' slug=product.slug %}"><img src="{{ product.image.url }}" class="img-responsive "></a>
+                                    <div class="card-body">
+                                        <h5 class="card-title"><a href="#">{{ product.title }}</a></h5>
+                                        <p class="card-text">{{product.description}}</p>
+                                    </div>
+                                </div> 
+                            </div>
+                        {% endif %}
+                    {% endfor %}
+                {% else %}
+                <h4 class="no-artisans">No product to display at this moment, kindly check back later!</h4>
+                {% endif %}
+            </div>
+        </div>
+    </section>     
+{% endblock %}
