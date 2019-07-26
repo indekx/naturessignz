@@ -11,7 +11,6 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 """
 
 import os
-import dj_database_url
 from decouple import config
 
 # from notebook.transutils import base_dir
@@ -30,7 +29,7 @@ GOOGLE_RECAPTCHA_SECRET_KEY = config('GOOGLE_RECAPTCHA_SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = 'False'
 
-ALLOWED_HOSTS = ['http://www.naturessigns.com', 'naturessigns.com', 'naturessigns.herokuapp.com']
+ALLOWED_HOSTS = ['http://www.naturessigns.com', '.naturessigns.com', 'naturessigns.herokuapp.com']
 
 # Application definition
 INSTALLED_APPS = [
@@ -95,6 +94,7 @@ DATABASES = {
     }
 }
 
+import dj_database_url
 db_from_env = dj_database_url.config()
 DATABASES['default'].update(db_from_env)
 DATABASES['default']['CONN_MAX_AGE'] = 500
