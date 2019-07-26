@@ -23,8 +23,8 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__fil
 # See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = config('NS_SECRET_KEY')
-GOOGLE_RECAPTCHA_SECRET_KEY = config('GOOGLE_RECAPTCHA_SECRET_KEY')
+SECRET_KEY = os.environ.get('NS_SECRET_KEY')
+GOOGLE_RECAPTCHA_SECRET_KEY = os.environ.get('GOOGLE_RECAPTCHA_SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = 'False'
@@ -86,11 +86,11 @@ WSGI_APPLICATION = 'naturessigns.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'HOST': config('NS_DB_HOST'),
-        'NAME': config('NS_DB_NAME'),
-        'USER': config('NS_DB_USER'),
-        'PASSWORD': config('NS_DB_PASSWORD'),
-        'PORT': config('NS_DB_PORT'),
+        'HOST': os.environ.get('NS_DB_HOST'),
+        'NAME':os.environ.get('NS_DB_NAME'),
+        'USER': os.environ.get('NS_DB_USER'),
+        'PASSWORD': os.environ.get('NS_DB_PASSWORD'),
+        'PORT': os.environ.get('NS_DB_PORT'),
     }
 }
 
