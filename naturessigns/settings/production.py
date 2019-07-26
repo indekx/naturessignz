@@ -50,6 +50,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -142,11 +143,11 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static"),
 ] 
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'ns_static_files_cdn')
+STATIC_ROOT = os.path.join(BASE_DIR, 'ns_static_files_cdn', 'static_root')
 
-MEDIA_URL = '/media_files_cdn/'
+MEDIA_URL = '/media/'
 
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media_files_cdn')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media_files_cdn', 'media_root')
 
 LOGIN_REDIRECT_URL = '/'
 
