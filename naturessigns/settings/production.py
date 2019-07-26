@@ -142,11 +142,11 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static"),
 ] 
 
-STATIC_ROOT = os.path.join(os.path.dirname(BASE_DIR), 'ns_static_files_cdn')
+STATIC_ROOT = os.path.join(BASE_DIR, 'ns_static_files_cdn')
 
 MEDIA_URL = '/media_files_cdn/'
 
-MEDIA_ROOT = os.path.join(os.path.dirname(BASE_DIR), 'media_files_cdn')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media_files_cdn')
 
 LOGIN_REDIRECT_URL = '/'
 
