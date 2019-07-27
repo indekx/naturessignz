@@ -2,6 +2,17 @@
 {% load crispy_forms_tags %}
 {% load static %}
 
+
+{% if messages %}
+    {% for message in messgaes %}
+        <div class="container">
+            <div class="alert alert-success">
+                {{message}}<br/>
+            </div>
+        </div>
+    {% endfor %}
+{% endif %}
+
 {% block become_distributor %}
     <section class="become_distributor" style="padding-top: 110px">
         <div class="container">
@@ -74,7 +85,7 @@
                     </div>
                 </div>
                 <script src='https://www.google.com/recaptcha/api.js'></script>
-                <div class="g-recaptcha" data-sitekey="6LfojKsUAAAAAGpk_n8mKwtOdvSw3XPlKVjncZGU"></div>
+                <div class="g-recaptcha" data-sitekey="6Lf6ua8UAAAAAN2ehPz-5_K_EptCZN-RSQafqaFy"></div>
                 <br>
                <input type="submit" value="Apply Now" class="btn btn-success">
            </form>
