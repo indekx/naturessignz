@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from django.contrib import messages
 from django.template.loader import render_to_string
 from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login, logout, get_user_model
@@ -73,6 +74,7 @@ def edit_profile(request):
 
         if form.is_valid():
             form.save()
+            messages.success(request, 'Your profile was updated successfully')
             return redirect('/accounts/profile')
         
     else:

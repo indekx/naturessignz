@@ -167,8 +167,16 @@ p.landing_banner_left_text{
     background-repeat: no-repeat;
 }
 
-.landing_banner_left{
-    background: url('../images/cards/prostarighttea.png')
+#landing_page_banner{
+    text-align: center;
+    background: url('../images/cards/prostarighttea.PNG');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    min-height: 550px;
+    margin-top: 80px;
+    margin-bottom: 30px;
+    width: 100%;
 }
 
 .services_card_text{
@@ -415,38 +423,6 @@ section .section-title {
     padding-bottom: 0px;
     margin-bottom: 10px;
   }
-
-  
-
-  .landing_banner_left h1{
-      font-size: 2rem;
-  }
-
-  .btn.btn_explore_services_cta{
-      font-size: 1rem;
-      max-width: 70px !important;
-  }
-
-  .landing_banner_left p{
-      font-size: 1rem;
-  }
-
-  .showcase-left img{
-      padding-right: 10px;
-  }
 }
-
-@media (max-width: 1265px){
-    .col-md-6.col-sm-6landing_banner_right img{
-        min-height: 400px !important;
-        display: grid;
-    }
-    .landing_banner_left{
-        display: grid;
-        min-height: auto;
-        font-size: 1em;
-    }
-}
-
 
 /* footer section style begins */

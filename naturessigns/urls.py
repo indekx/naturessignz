@@ -25,8 +25,8 @@ urlpatterns = [
     url(r'^', include('baseapp.urls')),
     url(r'^accounts/', include('accounts.urls')),
     url(r'^appointments/', include('appointments.urls')),
+    url(r'^blog/', include('blog.urls')),
     url(r'^businesss/', include('business.urls')),
-    # url(r'^', include('appointments.urls')),  
 ]
 
 if settings.DEBUG:

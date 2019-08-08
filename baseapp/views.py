@@ -22,7 +22,7 @@ from .models import Product
 
 # Create your views here.
 def index(request):
-    return render(request, 'index.html')
+    return render(request, 'homepage.html')
 
 def about_us(request):
     return render(request, 'about_us.html')

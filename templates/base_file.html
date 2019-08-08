@@ -28,6 +28,7 @@
    
     <!-- custom css -->
        <link href="{% static 'css/styling.css' %}" rel="stylesheet" type="text/css" media="screen">
+       <link href="{% static 'css/homepage.css' %}" rel="stylesheet" type="text/css" media="screen">
        <link href="{% static 'css/particles-login.css' %}" rel="stylesheet" type="text/css" media="screen">
     
     <!-- Linking JS files -->
@@ -72,10 +73,10 @@
                             </div>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Gallery</a>
+                            <a class="nav-link" href="#">Resources</a>
                         </li>
                         <li class="nav-item">
-                                <a class="nav-link" href="#">Resources</a>
+                                <a class="nav-link" href="{% url 'blog_list' %}">Blog</a>
                             </li>
                     </ul>
                     <ul class="navbar-nav">                
@@ -180,6 +181,14 @@
       
     {% endblock %}
 
+    {% block create_article %}
+      
+    {% endblock %}
+
+    {% block view_blog %}
+      
+    {% endblock view_blog %}
+
     <!-- end block tags-->
 
     <!-- Footer Begins -->
@@ -216,6 +225,8 @@
                             <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Visit Our Store</a></li>
                             <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>FAQ</a></li>
                             <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Videos</a></li>
+                            <li><a href="{% url 'blog_list' %}"><i class="fa fa-angle-double-right"></i>Read Blog</a></li>
+                            <li><a href="{% url 'create_article' %}"><i class="fa fa-angle-double-right"></i>Add Blog</a></li>
                         </ul>
                     </div>
                     <div class="col-xs-12 col-sm-3 col-md-3">

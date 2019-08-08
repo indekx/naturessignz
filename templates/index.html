@@ -2,28 +2,13 @@
 {% load static%}
 
 {% block index %}
-<section class="landing_banner">
-    <div class="contaniner-fluid" style="width: 100%; padding-top: 30px !important;">
-        <div class="row">
-            <div class="col-sm-6 col-md-6 col-xs-12" style="padding-left: 0; padding-right: 0; ">
-                <div class="landing_banner_left" style="background: #009999; min-height: 437px;">
-                    <h1 class="landing_content">The Nature’s Signs</h1>
-                    <p class="landing_banner_left_text">
-                        New grounds have been broken in developing natural health products, those that match or out-perform the chemically enhanced counterpart, packed with innovation for purpose of purity. 
-                        This platform sources for the best, organically formulated solutions that help you strike the right balance.
-                    </p>
-                    <br>
-                    <a class="btn btn_explore_services_cta" href="{% url 'our_services' %}">Explore services</a>
-                </div>
-            </div>
-            <div class="col-sm-6 col-md-6 col-xs-12" style="padding-left: 0; padding-right: 0;">
-                <div class="landing_banner_right">
-                    <a class="" href="">
-                        <img src="{% static 'images/cards/showcase_card2.jpeg' %}" style="width: 100%;">
-                    </a>
-                </div>
-            </div>
-        </div>
+<section id="landing_page_banner">
+    <div class="container-fluid" style="padding-left: 0; padding-right: 0">
+        <div class="how_it_works_textWrapp">
+            <h1 style="color: #fff; font-size: 2.7rem;">The Nature’s Signs!</h1>
+            <p style="color: #fff; font-size: 1.1rem">This platform sources for the best, organically formulated solutions that help you strike the right balance.</p>
+            <a href="#" class="btn how_it_works_cta">Learn More</a>
+        </div>      
     </div>
 </section>
 <section class="showcase showcaseMain">

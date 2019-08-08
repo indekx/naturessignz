@@ -7,7 +7,6 @@ from django.db import models
 from django.db.models import Q, query, signals
 from django.db.models.signals import pre_save
 from django.forms import ModelForm
-# Create your models here.
 from django.urls import reverse
 from django.utils import timezone
 from django.utils.encoding import python_2_unicode_compatible
