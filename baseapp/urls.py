@@ -9,6 +9,7 @@ urlpatterns = [
     url(r'^how_we_do_it/$', views.how_we_do_it, name='how_we_do_it'),
     url(r'^product/add/$', views.add_product, name='add_product'),
     url(r'^products/store/$', views.store, name='store'),
+    url(r'^products/prostaright_tea/$', views.product_prostaright, name='prostaright_tea'),
     url(r'^services/drugs/$', views.drugs, name='drugs'),
     url(r'^(?P<slug>[\w-]+)/$', views.product_detail, name='product_detail'),
 ]

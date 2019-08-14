@@ -87,3 +87,7 @@ def add_product(request):
         form = forms.AddProduct()
     return render(request, 'products_list/add_product.html', {'form': form})
 
+
+ # View for Prostaright Tea   
+def product_prostaright(request):
+    return render(request, 'products_list/prostaright_tea.html')

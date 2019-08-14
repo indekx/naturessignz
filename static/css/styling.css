@@ -250,6 +250,18 @@ input.form-control.search-box{
    
 }
 
+.about_prostaright_bg_img{
+    background: url('../images/showcase/prostaright.JPG');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 450px;
+    opacity: 0.6;
+    margin-top: 30px;
+    object-fit: cover;
+}
+
 .schedule_appointment{
     background: url('../images/features/appointment.jpeg');
     background-size: 100%;
