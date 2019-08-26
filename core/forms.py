@@ -1,10 +1,10 @@
 from django import forms
-from baseapp import models
+from . import models
 
 
 class AddProduct(forms.ModelForm):
     class Meta:
-        model = models.Product
+        model = models.Item
         fields = [
             'title',
             'category',
@@ -15,7 +15,7 @@ class AddProduct(forms.ModelForm):
             'detail',
          ]
         
-    login_url = '/login/'
+    login_url = '/login/' 
 
 class ResourceDownloadForm(forms.Form):
     first_name = forms.CharField(widget=forms.TextInput(attrs={'placeholder': 'First name'}), label="", max_length=100, required=True)

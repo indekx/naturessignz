@@ -21,8 +21,8 @@ from django.urls import path
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    url(r'^baseapp/', include('baseapp.urls')),
-    url(r'^', include('baseapp.urls')),
+    url(r'^core/', include('core.urls')),
+    url(r'^', include('core.urls')),
     url(r'^accounts/', include('accounts.urls')),
     url(r'^appointments/', include('appointments.urls')),
     url(r'^blog/', include('blog.urls')),

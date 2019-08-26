@@ -5,16 +5,17 @@
     <section class="store-items" style="margin-top: 60px;">
         <div class="container">
             <div class="row">
-                    {% if products %}
-                    {% for product in products %}
-                        {% if product.image %}
+                    {% if items %}
+                    {% for item in items %}
+                        {% if item.image %}
                             <!-- A Product Start -->
                             <div class="col-md-3 col-sm-3">
                                 <div class="card" style="width: 18rem;">
-                                    <a href="{% url 'product_detail' slug=product.slug %}"><img src="{{ product.image.url }}" class="img-responsive "></a>
+                                    <a href="{% url 'product_detail' slug=product.slug %}"><img src="{{ item.image.url }}" class="img-responsive "></a>
                                     <div class="card-body">
-                                        <h5 class="card-title"><a href="#">{{ product.title }}</a></h5>
-                                        <p class="card-text">{{product.description}}</p>
+                                        <h5 class="card-title"><a href="#">{{ item.title }}</a></h5>
+                                        <h5><strong>{{item.price}}</strong></h5>
+                                        <p class="card-text">{{item.description}}</p>
                                     </div>
                                 </div> 
                             </div>

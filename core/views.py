@@ -11,16 +11,15 @@ from django.views import generic
 from django.views.generic.edit import CreateView, DeleteView, UpdateView
 from requests.api import request
 
-from . import validation_util
+from . import forms
+
 from django.contrib import messages
 from django.http import HttpResponseRedirect
 from django.urls import reverse
 
-from . import forms
-from .models import Product
+from .models import Item, OrderItem, Order
 
 
-# Create your views here.
 def index(request):
     return render(request, 'homepage.html')
 
@@ -49,7 +48,7 @@ def drugs(request):
     return render(request, 'dispensary/drugs.html')
 
 def store(request):
-    queryset = Product.objects.all()  # .order_by('-timestamp')
+    queryset = Item.objects.all()  # .order_by('-timestamp')
     query = request.GET.get("q")
     if query:
         queryset = queryset.filter(
@@ -67,11 +66,21 @@ def store(request):
 
 
 def product_detail(request, slug):
-    product = get_object_or_404(Product, slug=slug)
+    product = get_object_or_404(Item, slug=slug)
 
     return render(request, 'products_list/product_detail.html', {'product': product})
 
 
+ # View for Prostaright Tea   
+def product_prostaright(request):
+    return render(request, 'products_list/prostaright_tea.html')
+
+
+from . import forms
+from .models import Item
+
+
+# Create your views here.
 @login_required(login_url='/accounts/login/')
 def add_product(request):
     if request.method == 'POST':
@@ -86,8 +95,3 @@ def add_product(request):
     else:
         form = forms.AddProduct()
     return render(request, 'products_list/add_product.html', {'form': form})
-
-
- # View for Prostaright Tea   
-def product_prostaright(request):
-    return render(request, 'products_list/prostaright_tea.html')

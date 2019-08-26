@@ -45,8 +45,8 @@ INSTALLED_APPS = [
     'appointments',
     'blog',
     'business',
-    'baseapp',
     'crispy_forms',
+    'core',
 ]
 
 MIDDLEWARE = [
@@ -148,7 +148,7 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'ns_static_files_cdn', 'static_root')
 
 MEDIA_URL = '/media/'
 
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media_files_cdn', 'media_root')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media_files_cdn')
 
 LOGIN_REDIRECT_URL = '/'
 
