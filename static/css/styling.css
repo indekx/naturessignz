@@ -352,6 +352,13 @@ img{
     text-align: center;
     font-size: 1.1em;
     line-height: 30px;
+    list-style-type: square;
+    display: list-item;
+    list-style-position: inside;
+
+
+    
+    
 }
 
 .copy{
