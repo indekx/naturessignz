@@ -251,10 +251,11 @@ input.form-control.search-box{
 }
 
 .about_prostaright_bg_img{
-    background: url('../images/showcase/p-tea.jpg');
+    background: url('../images/showcase/prostaright.JPG') center center fixed;
     background-repeat: no-repeat;
     background-size: cover;
     width: 100vw;
+    height: 450px;
     margin-top: 30px;
     object-fit: contain;
     -webkit-background-size: cover;
