@@ -251,7 +251,7 @@ input.form-control.search-box{
 }
 
 .about_prostaright_bg_img{
-    background: url('../images/showcase/p-tea.jpg') center center fixed;
+    background: url('../images/showcase/p-tea.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     width: 100vw;
