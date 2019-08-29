@@ -348,17 +348,29 @@ img{
     color: #555;
 }
 
+#about_prostaright_bg_content ul {
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(minmax(auto, 20vw)) 1fr;
+    grid-column-gap: 1vw;
+    
+
+}
 #about_prostaright_bg_content li{
-    text-align: center;
+   
     font-size: 1.1em;
-    line-height: 30px;
+    line-height: 35px;
     list-style-type: square;
     display: list-item;
     list-style-position: inside;
+    color: #3aac54;
+   
+}
 
-
-    
-    
+#about_prostaright_bg_content p{
+    text-align: center;
+    color: #999;
+    font-size: 1.2em;
 }
 
 .copy{
