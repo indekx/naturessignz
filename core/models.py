@@ -72,7 +72,7 @@ class OrderItem(models.Model):
         return self.title
 
 class Order(models.Model):
-    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
+    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, default=None)
     items = models.ManyToManyField(OrderItem)
     ordered = models.BooleanField(default=False)
     date_created = models.DateTimeField(auto_now_add=True)
