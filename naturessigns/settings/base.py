@@ -43,8 +43,8 @@ INSTALLED_APPS = [
 
     # Site Apps
     'accounts',
+    'articles',
     'appointments',
-    'blog',
     'business',
     'crispy_forms',
     'core',
